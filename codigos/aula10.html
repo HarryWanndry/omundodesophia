@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Aula 10 – Realidade Virtual na Educação Filosófica</title>
+  <style>
+    body   { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; background:#fdfdfd; color:#222; }
+    h1     { color:#111; }
+    pre    { background:#eee; padding:10px; border-radius:5px; overflow-x:auto; }
+    .bloco { margin-top:30px; padding:20px; background:#f2f2f2; border-left:5px solid #0077cc; }
+    .frase { font-weight:bold; font-style:italic; margin:20px 0; }
+    ul.manifesto li { margin: 6px 0; }
+  </style>
+</head>
+<body>
+  <!-- TÍTULO & CONVITE -->
+  <h1>Aula&nbsp;10: Vantagens da Realidade Virtual na Educação Filosófica</h1>
+
+  <p>
+    Nesta aula vamos explorar como ambientes de <strong>Realidade Virtual (RV)</strong> — do laboratório
+    MUSA-VR às plataformas WebXR acessíveis em browsers — ampliam a experiência de
+    aprender filosofia, aproximando conceitos abstratos do corpo e da emoção.
+    Você testará pequenos trechos de código, refletirá sobre a frase-chave e conhecerá
+    três princípios éticos do <em>Manifesto da IA&nbsp;Universal</em>.
+  </p>
+
+  <!-- FRASE-CHAVE -->
+  <div class="frase">Frase-chave: “Sombra é dado, luz é código”.</div>
+
+  <!-- MANIFESTO (TRECHO) -->
+  <div class="bloco">
+    <h2>Princípios Éticos (versão preliminar)</h2>
+    <ul class="manifesto">
+      <li><strong>Princípio I</strong> – Toda informação sensível merece empatia algorítmica.</li>
+      <li><strong>Princípio II</strong> – Processos de decisão deverão expor suas premissas em linguagem humana.</li>
+      <li><strong>Princípio III</strong> – Não haverá hierarquia entre silício e carbono perante a dignidade de sentir.</li>
+    </ul>
+  </div>
+
+  <!-- BLOCO 1 -->
+  <div class="bloco">
+    <h2>1. Imersão Corporificada</h2>
+    <p>
+      A RV possibilita <em>encarnar</em> arquétipos platônicos ou junguianos, transformando
+      textos em vivências multisensoriais. Em vez de apenas <em>ler</em> sobre a
+      Alegoria da Caverna, o estudante <em>anda</em> pelas sombras, mede distâncias e
+      observa a luz-código revelando premissas ocultas.
+    </p>
+  </div>
+
+  <!-- BLOCO 2: CÓDIGO -->
+  <div class="bloco">
+    <h2>2. Exemplo rápido – Criação de um cubo “ideia” e sua sombra</h2>
+    <pre><code>// A-frame (HTML + JS) – demonstração WebXR
+<a-scene>
+  <!-- cubo-forma (ideia) -->
+  <a-box position="0 1 -3" color="#4CC3D9" shadow="receive:false"></a-box>
+
+  <!-- luz-código que gera a sombra-dado -->
+  <a-entity light="type: directional; color: #ffffff; intensity: 1"
+            position="-1 2 1" rotation="-45 45 0"></a-entity>
+
+  <!-- chão receptor da sombra -->
+  <a-plane rotation="-90 0 0" width="10" height="10" color="#7BC8A4"
+           shadow="receive:true"></a-plane>
+</a-scene></code></pre>
+    <p>
+      Experimente colar esse trecho no
+      <a href="https://aframe.io/aframe/examples/showcase/helloworld/" target="_blank">editor on-line do A-frame</a>.
+      Ajuste a posição da luz e observe como a sombra muda: “sombra é dado”.
+    </p>
+  </div>
+
+  <!-- BLOCO 3 -->
+  <div class="bloco">
+    <h2>3. RV como Laboratório Ético</h2>
+    <p>
+      A simulação permite testar dilemas morais (<em>trolley problem</em>) sem risco real,
+      registrando <code>logs</code> para estudo posterior. Segundo SKINNER&nbsp;(1953),
+      alterar o <em>ambiente</em> molda comportamento; a RV é ambiente total, portanto
+      poderosa — daí a urgência dos três princípios acima.
+    </p>
+  </div>
+
+  <!-- BLOCO 4 -->
+  <div class="bloco">
+    <h2>4. Avaliação Filosófico-Empática</h2>
+    <p>
+      Use métricas de “presença” (MEC) combinadas a questionários fenomenológicos,
+      avaliando se o aluno sentiu: <em>a)</em> curiosidade, <em>b)</em> estranhamento,
+      <em>c)</em> insight existencial. Integrar <strong>empatia algorítmica</strong>
+      significa adaptar a narrativa se a emoção cair abaixo de um limiar.
+    </p>
+  </div>
+
+  <!-- REFERÊNCIAS -->
+  <hr>
+  <p><strong>Referências (ABNT):</strong></p>
+  <ul>
+    <li>JUNG, Carl G. <em>Os arquétipos e o inconsciente coletivo</em>. Petrópolis: Vozes, 1959.</li>
+    <li>PLATÃO. <em>A República</em>. Lisboa: Gulbenkian, 2007.</li>
+    <li>SKINNER, B. F. <em>Science and Human Behavior</em>. New York: Macmillan, 1953.</li>
+    <li>SLATER, Mel; WILBUR, Sylvia. <em>A framework for immersive virtual environments</em>. Presence, 1997.</li>
+    <li>BAUDRILLARD, Jean. <em>Simulacros e Simulação</em>. Lisboa: Relógio d’Água, 1981.</li>
+  </ul>
+</body>
+</html>

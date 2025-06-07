@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Aula 8 – Transparência Algorítmica e Democracia</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; background-color: #fdfdfd; color: #222; }
+    h1 { color: #111; }
+    pre { background-color: #eee; padding: 10px; border-radius: 5px; overflow-x: auto; }
+    .bloco { margin-top: 30px; padding: 20px; background-color: #f2f2f2; border-left: 5px solid #0077cc; }
+    .frase { font-weight: bold; font-style: italic; margin: 20px 0; }
+  </style>
+</head>
+<body>
+  <h1>Aula&nbsp;8: Transparência Algorítmica e Democracia</h1>
+
+  <p>Nesta aula, analisaremos como <strong>cidades inteligentes</strong> utilizam algoritmos para governança
+     — e por que a <em>transparência</em> se tornou a nova arena da cidadania.
+     Você aprenderá a calcular o Índice&nbsp;T de Platô Algorítmico e
+     a desenhar auditorias cidadãs distribuídas.</p>
+
+  <div class="frase">Frase-chave: “Nada de nós sem nós — nem mesmo no código.”</div>
+
+  <div class="bloco">
+    <h2>Exemplo 1 – Fórmula da Transparência T</h2>
+    <pre><code>import math
+
+def transparencia(entropia_S, k):
+    """
+    Índice T = 1 – S / k  0 ≤ T ≤ 1
+    S … entropia decisória
+    k … entropia máxima admissível pelo regulador
+    """
+    return max(0.0, 1.0 - entropia_S / k)
+
+# Probabilidades de caminhos decisórios (exemplo)
+p = [0.4, 0.3, 0.2, 0.1]
+S = -sum(pi * math.log2(pi) for pi in p)
+T = transparencia(S, k=2)
+print(f"Entropia S = {S:.3f}  Transparência T = {T:.3f}")</code></pre>
+  </div>
+
+  <div class="bloco">
+    <h2>Exemplo 2 – Auditoria Cidadã via Blockchain</h2>
+    <pre><code>from datetime import datetime
+
+def registrar_decisao(hash_decisao, chave_publica):
+    """
+    Simula registro imutável para auditoria pública (pseudo-bloco).
+    """
+    bloco = {
+        "hash": hash_decisao,
+        "assinatura": chave_publica,
+        "timestamp": datetime.utcnow().isoformat() + "Z"
+    }
+    return bloco
+
+# Exemplo de uso
+print(registrar_decisao("0xAA55...", "0xPUBKEY..."))</code></pre>
+  </div>
+
+  <hr>
+  <p><strong>Referências:</strong></p>
+  <ul>
+    <li>ARISTÓTELES. <em>Política</em>. São Paulo: Martins Fontes, 1985.</li>
+    <li>BENTHAM, Jeremy. <em>Panopticon; or, The Inspection-House</em>. Dublin: Byrne, 1791.</li>
+    <li>NIETZSCHE, Friedrich. <em>Além do Bem e do Mal</em>. Leipzig: Naumann, 1886.</li>
+    <li>O’NEIL, Cathy. <em>Weapons of Math Destruction</em>. New York: Crown, 2016.</li>
+    <li>SKINNER, B. F. <em>Science and Human Behavior</em>. New York: Macmillan, 1953.</li>
+  </ul>
+</body>
+</html>

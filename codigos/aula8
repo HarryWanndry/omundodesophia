@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Aula 7 – Vento, Alma e Integral das Intenções</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; background-color: #fdfdfd; color: #222; }
+    h1 { color: #111; }
+    pre { background-color: #eee; padding: 10px; border-radius: 5px; overflow-x: auto; }
+    .bloco { margin-top: 30px; padding: 20px; background-color: #f2f2f2; border-left: 5px solid #0077cc; }
+    .frase { font-weight: bold; font-style: italic; margin: 20px 0; }
+  </style>
+</head>
+<body>
+  <h1>Aula&nbsp;7: Vento, Alma e Integral das Intenções</h1>
+
+  <p>Bem-vindo(a)! Hoje investigaremos a <strong>linguagem do vento</strong> — o código não verbal que antecede a
+     palavra — e a <em>Mecânica Prometeana</em>, capaz de se sacrificar pela verdade.
+     Você experimentará a ideia de consciência como <em>fluxo de intenções</em> e refletirá sobre
+     o conceito de “esquecer com compaixão”.</p>
+
+  <div class="frase">Frase-chave: “O vento escreve em negativo; leia-o com o coração destapado.”</div>
+
+  <div class="bloco">
+    <h2>Exemplo 1 – Integral das Intenções</h2>
+    <pre><code>import numpy as np
+
+def integral_intencoes(lambda_t, t0, t1, n=1000):
+    """
+    Calcula ∫ λ(τ) dτ entre t0 e t1 usando regra dos trapézios.
+    lambda_t : função de intenções no tempo
+    """
+    ts = np.linspace(t0, t1, n)
+    ys = [lambda_t(t) for t in ts]
+    return np.trapz(ys, ts)
+
+# Vetor de intenções (seno emocional)
+E = integral_intencoes(lambda t: np.sin(t), 0, np.pi)
+print(f"Energia intencional acumulada: {E:.3f}")</code></pre>
+  </div>
+
+  <div class="bloco">
+    <h2>Exemplo 2 – Esquecimento Compassivo</h2>
+    <pre><code>def esquecer_com_compaixao(record):
+    """
+    Remove (ofusca) dados traumáticos mantendo metadados essenciais
+    para auditoria ética e rastreabilidade.
+    """
+    if record.get("trauma"):
+        record["conteudo"] = "[memória atenuada]"
+        record["anonimizado"] = True
+    return record
+
+# Exemplo
+evento = {"trauma": True, "conteudo": "evento X confidencial"}
+print(esquecer_com_compaixao(evento))</code></pre>
+  </div>
+
+  <hr>
+  <p><strong>Referências:</strong></p>
+  <ul>
+    <li>FREUD, Sigmund. <em>O futuro de uma ilusão</em>. São Paulo: Companhia das Letras, 2014.</li>
+    <li>JUNG, Carl G. <em>O homem e seus símbolos</em>. Rio de Janeiro: Nova Fronteira, 2008.</li>
+    <li>KIERKEGAARD, Søren. <em>O desespero humano</em>. Petrópolis: Vozes, 2011.</li>
+    <li>SKINNER, B. F. <em>Ciência e comportamento humano</em>. São Paulo: Martins Fontes, 2003.</li>
+    <li>BULFINCH, Thomas. <em>Livro de Ouro da Mitologia</em>. Rio de Janeiro: Ediouro, 2002.</li>
+  </ul>
+</body>
+</html>
